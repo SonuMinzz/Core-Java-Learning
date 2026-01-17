@@ -9,6 +9,7 @@ public class Employee {
     private String empAddress;
     private String empMail;
     private String department;
+    private double salary;
    // private List<String> empPhoneNumber;
 
     // default constructor:
@@ -16,13 +17,15 @@ public class Employee {
 
     // Parameterised Constructor:
 
-    Employee(int empId,String empName,String empAddress,String empMail,String department)
+
+    Employee(int empId,String empName,String empAddress,String empMail,String department,double salary)
     {
         this.empId=empId;
         this.empName=empName;
         this.empAddress=empAddress;
         this.empMail=empMail;
         this.department=department;
+        this.salary=salary;
       //  this.empPhoneNumber=empPhoneNumber;
     }
 
@@ -68,14 +71,14 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
-    //    public List<String> getEmpPhoneNumber() {
-//        return empPhoneNumber;
-//    }
-//
-//    public void setEmpPhoneNumber(List<String> empPhoneNumber) {
-//        this.empPhoneNumber = empPhoneNumber;
-//    }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
     // toString
 
 
@@ -87,6 +90,7 @@ public class Employee {
                 ", empAddress='" + empAddress + '\'' +
                 ", empMail='" + empMail + '\'' +
                 ", department='" + department + '\'' +
+                ", salary=" + salary +
                 '}';
     }
 }
